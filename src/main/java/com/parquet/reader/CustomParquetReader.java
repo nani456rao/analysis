@@ -24,14 +24,14 @@ public class CustomParquetReader implements ItemReader<ParquetToJavaMapping> {
     @Override
     public ParquetToJavaMapping read() throws Exception {
         if (delegate == null) {
-            delegate = new IteratorItemReader<>(parquetToJavaMappings());
+            delegate = new IteratorItemReader<>(readParquetFile());
         }
 
         return delegate.read();
     }
 
 
-    private List<ParquetToJavaMapping> parquetToJavaMappings() throws FileNotFoundException {
+    private List<ParquetToJavaMapping> readParquetFile() throws FileNotFoundException {
         List<ParquetToJavaMapping> readParquetFile = new ArrayList<>();
 
         ParquetToJavaMapping parquetToJavaMapping = new ParquetToJavaMapping();

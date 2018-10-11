@@ -8,8 +8,7 @@ public class CustomParquetWriter implements org.springframework.batch.item.ItemW
 
     @Override
     public void write(List<? extends JavaToParquetFile> list) throws Exception {
-
+        // Write a records to parquet file.
         System.out.println("I am in writer" + list.size());
-
     }
 }

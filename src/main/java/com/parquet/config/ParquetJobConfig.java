@@ -28,7 +28,8 @@ public class ParquetJobConfig {
 
 
     @Autowired
-    StepBuilderFactory stepBuilderFactory;
+    private StepBuilderFactory stepBuilderFactory;
+
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
 
@@ -92,6 +93,7 @@ public class ParquetJobConfig {
     public JobRepository jobRepository(ResourcelessTransactionManager transactionManager) throws Exception {
         MapJobRepositoryFactoryBean mapJobRepositoryFactoryBean = new MapJobRepositoryFactoryBean(transactionManager);
         mapJobRepositoryFactoryBean.setTransactionManager(transactionManager);
+
         return mapJobRepositoryFactoryBean.getObject();
     }
 
