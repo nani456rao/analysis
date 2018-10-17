@@ -6,7 +6,7 @@
     <groupId>com.baeldung</groupId>
     <artifactId>parquet-batch-file</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>parquet-batch-file</name>
     <description>parquet-batch-file</description>
 
